@@ -22,6 +22,7 @@ The tool ignores missing tables and columns when importing the data.
    * jdbcimage export -url=jdbc:postgresql://localhost:5432/inttests?currentSchema=qa -user=postgres -password=postres postgres.zip
    * jdbcimage export -url=jdbc:oracle:thin:@localhost:1521:XE -user=system -password=changeit oracle.zip
    * jdbcimage export -url=jdbc:sqlserver://localhost:1433;databaseName=XE -user=sa -password=changeit sqlserver.zip
+   * jdbcimage export -url=jdbc:sap://localhost:30015?encrypt=true&validateCertificate=true&currentschema=ABC -user=SYSTEM -password=changeit hana.zip
 4. Import from a zip file
    * BEWARE: !!!import deletes data from all tables contained in the imported zip file!!!
    * jdbcimage import -url=jdbc:mariadb://localhost:3306/qa -user=root -ignored_tables=schemaversion -password=root -ignored_tables=SCHEMAVERSION postgres.zip

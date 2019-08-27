@@ -55,6 +55,7 @@ public class KryoResultSetConsumer implements ResultConsumer<ResultSet>{
 					case Types.BINARY:
 						kryo.writeObjectOrNull(out, rs.getBytes(i+1), byte[].class);
 						break;
+				case Types.BOOLEAN:
 					case Types.BIT:
 						Boolean bVal = rs.getBoolean(i+1);
 						if (rs.wasNull()) bVal = null;

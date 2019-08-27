@@ -323,6 +323,8 @@ public abstract class MainToolBase implements AutoCloseable {
 				dbFacade = new PostgreSQL();
 			} else if (matcher.test("mysql") || matcher.test("mariadb")) {
 				dbFacade = new MariaDB();
+			} else if (matcher.test("sap")) {
+				dbFacade = new Hana();
 			}
 			if (dbFacade !=null) break;
 		}

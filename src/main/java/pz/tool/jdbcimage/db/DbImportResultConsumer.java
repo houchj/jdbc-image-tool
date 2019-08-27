@@ -113,6 +113,7 @@ public class DbImportResultConsumer implements ResultConsumer<RowData>{
                             case Types.BINARY:
                                 stmt.setBytes(pos, (byte[])value);
                                 break;
+                            case Types.BOOLEAN:
                             case Types.BIT:
                                 stmt.setBoolean(pos, (Boolean)value);
                                 break;

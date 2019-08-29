@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# pass any -X and -D option to java
+JAVA_OPTS="$JAVA_OPTS -Xmx1024m"
+echo "Starting Java with: $JAVA_OPTS"
+java $JAVA_OPTS -classpath "./jdbcimage.jar:./ngdbc.jar" pz.tool.jdbcimage.main.JdbcImageMain "$@"
